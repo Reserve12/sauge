@@ -513,12 +513,14 @@ a {
     text-decoration: none; }
   .blog-section .post-entry .post-thumbnail {
     display: block;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+     max-width: 100%; /* Ensure it can grow to 100% of the container */}
     .blog-section .post-entry .post-thumbnail img {
-      border-radius: 20px;
-      -webkit-transition: .3s all ease;
-      -o-transition: .3s all ease;
-      transition: .3s all ease; }
+    width: 100%;        /* Ensures the image is responsive and fills the container width */
+    height: 450px;      /* Set a fixed height for the image */
+    object-fit: cover;  /* Ensures the image maintains aspect ratio and fits within the height */
+    border-radius: 20px;
+    transition: .3s all ease; /* Keeps the existing transition */}
   .blog-section .post-entry .post-content-entry {
     padding-left: 15px;
     padding-right: 15px; }
